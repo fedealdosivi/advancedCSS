@@ -1,0 +1,43 @@
+.escudo{
+	background: black;
+	width: 200px;
+	height: 120px;
+	border-radius: 5px 5px 10em 10em;
+}
+
+.encabezado {
+	border:1px solid #000;
+  	border-radius:5px 10px 1em 0.5em;
+}
+
+/*Haz que los elementos del tipo h3 tengan 
+en su caja un sombreado de color #444 con un valor de 5px en su eje X 
+y un valor de 10px en su eje Y. Por el momento sin nada de blur.*/
+h3{
+	box-shadow:5px 10px 0px #444;
+}
+
+/*Ahora haz que los elementos del tipo div
+ tengan una sombra de color #000, 
+ un blur de 10px y un valor de X e Y de -5%.*/
+.shadow-div{
+  	box-shadow:-5% -5% 10px #000;
+}
+
+/*Haz que todos los elementos del tipo p tengan un sombreado de color #000
+ con 0px de corrimiento en X y 3px de corrimiento en Y. Por ultimo, que tenga 1px de blur.*/
+p{
+	text-shadow:0px 3px 1px #000; 
+	box-shadow:0px 3px 1px #000;
+}
+
+p.destacado{
+  background-color:rgb(255,255,0);
+}
+
+/*Haz que todos los elementos con clase .noticia 
+tengan una sombra de caja que tenga 5px como valor de X e Y,
+ 2px como valor de blur y sea de color negro al 50%, pero que esté formada por la función hsl().*/
+.noticia{
+	box-shadow: 5px 5px 2px hsl(0,0,50%);
+}
