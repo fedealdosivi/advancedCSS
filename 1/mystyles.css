@@ -41,3 +41,64 @@ tengan una sombra de caja que tenga 5px como valor de X e Y,
 .noticia{
 	box-shadow: 5px 5px 2px hsl(0,0,50%);
 }
+
+/*Haz que todos los elementos del tipo h1 tengan una sombra de texto completamente negra, 
+con 0.5 de valor en su canal alfa, y esté hecha por la función rgba().
+ El resto de los valores de la propiedad son 0px 1px 2px.*/
+
+h1{
+  text-shadow:0 1px 2px rgba(0,0,0,0.5);
+}
+
+/*Haz que los elementos del tipo h2 estén transformados de manera
+ que estén movidos en su eje X unos 15px y rotados en unos 45deg.*/
+h2{
+  transform: translateX(15px) rotate(45deg);
+}
+
+.superior{
+ transform:translateY(50px)skew(45deg); 
+}
+
+/*Haz que todos los elementos del tipo div 
+esten corridos de su eje X e Y en un 5% utilizando la propiedad transform.*/
+
+.div-corrido{
+	transform:translateX(5%) translateY(5%);
+}
+
+/*Tomando el código a continuación, haz que el cambio de valor que produce la pseudo-clase :hover
+ esté animada mediante la propiedad transition y que dicha animación dure 500ms*/
+a {
+	color: rgb(255,0,0);
+  	transition:color 500ms;
+}
+a:hover {
+	color: rgb(0,255,0);
+}
+
+/*Haz que los elementos del tipo div tengan un color de fondo usando la propiedad background-color #FFF 
+y que esté cambie en :hover por el valor hsl(0,0,90%) 
+usando nuevamente background-color haciendo una transición fluida que dure 1s.*/
+.div-background{
+	background-color:#FFF;
+  	transition:background-color 1s;
+}
+.div-background:hover {
+	background-color:hsl(0,0,90%);
+}
+
+/*Queremos que cuando a todos los a se les pase el mouse por encima,
+ estos estén animados en todas sus propiedades y que sus transiciones duren 2000ms.*/
+
+.a-all{
+	color: rgba(255,0,0,0.9);
+	background-color: #FFF;
+	line-height: 1.2em;
+  	transition:all 2000ms;
+}
+.a-all:hover {
+	color: rgba(155,100,0,1);
+	background-color: rgb(235,235,235);
+	line-height: 1.5em;
+}
