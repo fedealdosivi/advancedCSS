@@ -1,0 +1,54 @@
+/*====================================================================================*/
+/*===========================CSS ORIENTADO A OBJETOS==================================*/
+/*====================================================================================*/
+
+/*Desarolla un selector con clase .button que lleve un padding superior e inferior de 0.3em
+ e izquierdo y derecho de 1.2em, un margin inferior de 5px y float hacia la izquierda. Continuando,
+  habrá que desarrollar objetos (clases) para crear las variantes del boton, tales así como .button-small y .button-big
+   que deberán tener un font-size de 0.8em y 1.4em, respectivamente. 
+   Es importante que estas dos clases que funcionan como variantes solo apliquen sus cambios 
+   si se combinan con el objeto .button original.*/
+
+.button{
+  padding:0.3em 1.2em;
+  margin-bottom:5px;
+  float:left;
+}
+
+.button.button-small{
+  font-size: 0.8em;
+}
+
+.button.button-big{
+  font-size:1.4em;
+}
+
+
+
+/*Vamos a generar ahora una clase .columna que tendrá un tamaño de fuente de 1em y estará floatada hacia la izquierda.
+ Luego creá dos elementos (clases) .dos-columnas y .tres-columnas que junto con .columna 
+ tengan un ancho del 50% y 33.33%, respectivamente.*/
+
+.columna{
+  font-size:1em;
+  float:left;
+}
+
+.columna.dos-columnas{
+  width:50%;
+}
+
+.columna.tres-columnas{
+  width:33.33%;
+}
+
+/*============================*/
+
+p.text{
+  line-height:1.4em;
+}
+
+.principal .text{
+  font-size:1.2em;
+  font-weight:600;
+}
