@@ -191,4 +191,16 @@ Estos guiónes deberán tener 0.8em de tamaño tipográfico, ser de color #000 y
  seguido de un espacio como contenido, pero que si el usuario hacer :hover sobre .caja,
   este signo mayor se transicione en el eje X unos 20px hacia la derecha.*/
 
- 
+.caja:after{
+  content:"> ";
+}
+
+.caja:hover:after{
+  transform:translateX(20px);
+}
+
+/*==============================*/
+
+.ellipsis div:after{
+  content:"...";
+}
