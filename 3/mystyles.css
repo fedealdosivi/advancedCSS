@@ -1,0 +1,146 @@
+/*====================================================================================*/
+/*===========================Selectores============================================*/
+/*====================================================================================*/
+
+/*Haz que todos los elementos del tipo a que tengan su atributo href lleven un ancho máximo de 200px.*/
+a[href]{
+  max-width:200px;
+}
+
+/*Haz que todos los elementos del tipo img 
+que no posean el atributo src lleven un color de texto con el valor hsl(0,0,35%).*/
+
+img:not([src]){
+ color:hsl(0,0,35%);
+}
+
+/*Haz que todos los elementos del tipo input que tengan su atributo type='text' lleven un peso tipográfico de 600.*/
+
+input[type='text']{
+  font-weight:600;
+}
+
+/*Haz que todos los elementos del tipo div que puedan tener en su atributo class el valor columna
+ tengan una altura minima del 25% y un ancho del 50%.*/
+
+div[class~='columna']{
+  min-height:25%;
+  width:50%;
+}
+
+/*Haz que todos los elementos con clase .encabezado que puedan tener en su atributo data el valor principal
+ tengan un ancho del 100% y un padding superior e inferior de 10px.*/
+
+ .encabezado[data~='principal']{
+  width:100%;
+  padding-top: 10px;
+  padding-bottom:10px;
+}
+
+/*Haz que todos los elementos del tipo p que puedan tener en su atributo rel el valor lead tengan color de fondo #FF0000.*/
+
+p[rel~='lead']{
+  background-color:#FF0000;
+}
+
+/*Desarolla un selector para seleccionar a cualquier elemento del tipo div que tenga una clase cualquiera 
+pero que dentro de su nombre lleve la palabra col con un posible guión.
+ Este selector debe tener un tamaño de fuente de 1.1em y un ancho de 25%.*/
+
+div[class|='col']{
+  font-size:1.1em;
+  width:25%;
+}
+
+/*Desarolla un selector para seleccionar a cualquier elemento de clase .column
+ que posea una clase cualquiera pero que dentro de su nombre esté la palabra bar con un posible guión.
+  Este selector deberá ser un 25% de alto y con una altura máxima de 300px.*/
+
+.column[class|='bar']{
+  height:25%;
+  max-height:300px;
+}
+
+/*Desarolla un selector para seleccionar a cualquier elemento con id #container
+ que tenga una clase que dentro de su nombre esté data-value con un posible guión. 
+ Este selector debe llevar un border-radius de 5px en sus esquinas superiores y 10px en las inferiores.*/
+
+ #container[class|='data-value']{
+  border-radius:5px 5px 10px 10px;
+}
+
+/*Fabrica un selector que apunte a todos los elementos del tipo img en el que su atributo src comienze con 'images/'
+ para que de esta manera estos elementos tengan un z-index superior a 20 pero inferior a 41 
+ y un border de 1px solid #cbcbcb.*/
+
+img[src^='images/']{
+  z-index:25;
+  border:1px solid #cbcbcb;
+}
+
+/*Haz que todos los elementos del tipo input en el que su atributo name empiece con user- 
+tenga un tamaño de fuente de 0.9em y una sangria de 1em.*/
+
+input[name^='user-']{
+  font-size:0.9em;
+  text-indent:1em;
+}
+
+/*Elabora un selector que apunte a todos los elementos del tipo textarea 
+cuyo atributo rows tenga como número inicial 4 para que lleve una altura de 100px y un color #FF0000.*/
+
+textarea[rows^='4']{
+  height:100px;
+  color:#FF0000;
+}
+
+/*Elabora un selector que afecte a todos los elementos que posean clases que finalizen en -text
+ para que tengan un color tipográfico de #444, una altura de linea de 1.4em y un peso tipográfico de 500.*/
+
+ [class$='-text']{
+  color:#444;
+  line-height:1.4em;
+  font-weight:500;
+}
+
+/*Haz que todos los elementos con clase .test que posean otra clase que finalice con -success
+ tengan como color de fondo #00FF00.*/
+.test[class$='-success']{
+  background-color:#00FF00;
+}
+
+/*Construye un selector que sirva para diseñar a todos los elementos del tipo p que desciendan de un id noticia
+ y que tengan alguna clase que finalice con -destacado para que estos tengan un tamaño de fuente de 2em y
+  un peso tipográfico de 600.*/
+
+#noticia p[class$='-destacado']{
+  font-size:2em;
+  font-weight:600;
+}
+
+/*Haz que cualquier elemento con atributo class que posea dentro de su valor la palabra container
+ tenga un ancho máximo de 960px y un ancho de 90%.*/
+
+[class*='container']{
+  max-width:960px;
+  width:90%;
+}
+
+/*Haz los elementos del tipo div con atributo data que tenga en algún lugar de su valor la palabra animated-
+ tengan transicionada su propiedad de altura en 2000ms. 
+ (Asegurate de colocar todos los prefijos aprendidos para los diferentes navegadores).*/
+
+div[data*='animated-']{
+  transition:height 2000ms;
+  -webkit-transition:height 2000ms;
+  -o-transition:height 2000ms;
+  -moz-transition:height 2000ms;
+  -ms-transition:height 2000ms;
+}
+
+/*Haz que los elementos del tipo input que tengan en su atributo value el valor correct o figure en medio de él,
+ tenga un color de fondo rgba(0,150,0,0.2).*/
+
+input[value*='correct']{
+  background-color:rgba(0,150,0,0.2);
+}
