@@ -1,0 +1,194 @@
+/*====================================================================================*/
+/*===========================PSEUDO CLASES============================================*/
+/*====================================================================================*/
+
+/*Haz que el quinto elemento del tipo div que descienda de un elemento del tipo section
+ tenga una altura de linea de 1.5em y un tamaño de fuente de 1.1em.*/
+
+section div:nth-child(5){
+  line-height:1.5em;
+  font-size:1.1em;
+}
+
+/*Haz que el segundo elemento del tipo p que descienda de un elemento del tipo div
+ tenga un color de fondo de rgba(255, 150, 0, 0.5).*/
+
+div p:nth-child(2){
+  background-color:rgba(255,150,0,0.5);
+}
+
+/*Haz que el tercer y sexto elemento del tipo h2 que estén dentro de un div
+ tenga un peso tipográfico de 600 y esté subrayado underline.*/
+
+div h2:nth-child(3), div h2:nth-child(6){
+  font-weight:600;
+  text-decoration:underline;
+}
+
+/*Haz que todos los segundos elementos del tipo p que desciendan de la clase .padre
+ tengan un color de fondo hsl(0,0,75%) y un color de tipografia de #444.*/
+
+.padre p:nth-of-type(2){
+  background-color:hsl(0,0,75%);
+  color:#444;
+}
+
+/*Haz que todos los elementos del tipo p que desciendan de un div
+ y estén ocupando el tercer lugar, tengan un sombra de caja de 4px 0 0 #000.*/
+
+div p:nth-of-type(3){
+  box-shadow:4px 0 0 #000;
+}
+
+/*Haz que todos los elementos con clase .destacado que desciendan de elementos con clase .noticia 
+y estén ocupando el quinto lugar, tengan un color de fondo de rgb(150,150,150) más un tamaño de fuente de 1.4rem.*/
+
+.noticia .destacado:nth-of-type(5){
+  background-color:rgb(150,150,150);
+  font-size:1.4rem;
+}
+
+/*Haz que la primera línea de cualquier texto que se halle dentro de un elemento del tipo p que tenga la clase
+ .bajada tenga un peso tipográfico de 600 y un tamaño de fuente de 1.8em.*/
+
+p.bajada:first-line{
+  font-weight:600;
+  font-size:1.8em;
+}
+
+/*Haz que la primera línea de cualquier texto que se halle dentro de un elemento del tipo p que que descienda
+ de un div tenga un color de fondo de #FFFF00 y una sombra en el texto de 0 1px 0 rgba(0,0,0,0.3).*/
+
+div p:first-line{
+  background-color:#FFFF00;
+  text-shadow:0 1px 0 rgba(0,0,0,0.3);
+}
+
+/*Haz que la primera línea de cualquier texto que se halle dentro de un elemento del tipo span que tenga la clase .primera
+ tenga un tamaño de fuente de 2rem, un alto de linea de 3rem y un color de #FF0000.*/
+
+span.primera:first-line{
+  font-size:2rem;
+  line-height:3rem;
+  color:#FF0000;
+}
+
+/*Haz que la primera letra de todos los elementos del tipo p que estén en tercer lugar y sean descendientes de los div,
+ tenga un peso tipográfico bold y un tamaño de fuente de 3em.*/
+
+div p:nth-of-type(3):first-letter{
+  font-weight:bold;
+  font-size:3em;
+}
+
+/*Haz que todos los elementos del tipo p que sean los primeros descendientes de cualquier elemento
+ tengan su letra capitular con un tamaño de 2.5em y un alto de linea de 2.8rem.*/
+
+p:first-child:first-letter{
+  font-size:2.5em;
+  line-height:2.8rem;
+}
+
+/*Haz que todos los elementos del tipo span tengan su primer letra de color rgb(0,0,255).*/
+
+span:first-letter{
+  color:rgb(0,0,255);
+}
+
+/*Haz que todos los elementos del tipo div con clase .bloque tengan una altura máxima de 200px 
+y un ancho del 50% pero asegurate de evitar que estos estilo se apliquen a los div con clase bloque-superior.*/
+
+div.bloque:not(.bloque-superior){
+  max-height:200px;
+  width:50%;
+}
+
+/*Haz que todos los elementos del tipo div que desciendan de otro div en el cual este no tenga una clase .destacado,
+ tengan una color de fondo de #cbcbcb y una sombra de caja de 1px 1px 5px rgba(0,0,0,0.5).*/
+
+div:not(.destacado) div{
+  background-color:#cbcbcb;
+  box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/*Haz que todos los elementos del tipo p que no tengan clase .principal lleven un peso tipográfico de 400,
+ un tamaño de fuente de 0.9em y una altura de linea de 1.3em.*/
+
+p:not(.principal){
+  font-weight:400;
+  font-size:0.9em;
+  line-height:1.3em;
+}
+
+/*Haz que todos los elementos del tipo li que estén vacios
+ y que desciendan de la clase .comidas tengan un width de un 50%.*/
+
+.comidas li:empty{
+  width:50%;
+}
+
+/*Haz que todos los elementos del tipo div que estén vacios
+ y que desciendan de otros div que estén :disabled, tengan un z-index de 1.*/
+
+div:disabled div:empty{
+  z-index:1;
+}
+
+/*Haz que todos los elementos del tipo p que sean los segundos de ese tipo
+ y desciendan de un div vacio, esten flotados a la derecha.*/
+
+div:empty p:nth-of-type(2){
+  float:right;
+}
+
+/*Haz que los elementos del tipo h3 tengan en su pseudo-clase :before el caracter mayor >
+, seguido de un espacio, con un tamaño de fuente de 12px y un padding izquierdo de 20px*/
+
+h3:before{
+  content:"> ";
+  font-size:12px;
+  padding-left:20px;
+}
+
+/*Haz que los elementos del tipo li que desciendan de un ul tengan en su pseudo-clase :before el caracter guión medio -,
+ seguido de un espacio, con un color de fuente de #00FF00 y un margin izquierdo de 2em.*/
+
+ul li:before{
+  content:"- ";
+  color:#00FF00;
+  margin-left:2em;
+}
+
+/*Haz que los elementos del tipo li que desciendan de un div tengan en su pseudo-clase
+ :before el caracter espacio con una posición relative y un clear both.*/
+
+div li:before{
+  content:" ";
+  position:relative;
+  clear:both;
+}
+
+/*Queremos que todos los li que desciendan de .lista lleven un guión medio - (con un espacio al final)
+ antes del contenido, y un guión - (con un espacio antes) luego del contenido.
+Estos guiónes deberán tener 0.8em de tamaño tipográfico, ser de color #000 y llevar un peso de fuente de 600.
+ No debes repetir código.*/
+
+.lista li:before{
+  content:"- ";
+}
+
+.lista li:after{
+  content:" -";
+}
+
+.lista li:before, .lista li:after{
+  font-size:0.8em;
+  color: #000;
+  font-weight:600;
+}
+
+/*Haz que todos los elementos con clase .caja tengan en su pseudo-clase :after un signo mayor >,
+ seguido de un espacio como contenido, pero que si el usuario hacer :hover sobre .caja,
+  este signo mayor se transicione en el eje X unos 20px hacia la derecha.*/
+
+ 
